@@ -16,9 +16,14 @@
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Tangerine|Tenali+Ramakrishna" rel="stylesheet">
 	<!-- MAIN CSS -->
-	<link rel="stylesheet" href="css/main.css">
-	<!--<link href="css/min665.css" rel="stylesheet" media="screen and (min-width:665px)">
-	<link href="css/max666landscape.css" rel="stylesheet" media="screen and (orientation:landscape)">-->
+	<link href="css/lg.css" rel="stylesheet">
+	<link href="css/xs.css" rel="stylesheet" media="screen and (max-width:768px)">
+	<link href="css/sm.css" rel="stylesheet" media="screen and (max-width: 992px) and (min-width: 769px)">
+	<link href="css/md.css" rel="stylesheet" media="screen and (max-width: 1200px) and (min-width: 993px)">
+	<!--<link href="css/max666landscape.css" rel="stylesheet" media="screen and (orientation:landscape)">-->
+	<!-- SLICK CAROUSEL CSS-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,7 +39,7 @@
 
 <!-- START HERO SECTION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	<header class="hero-bg text-center">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
 					<h1>Sean &amp; Tabitha</h1>
@@ -96,7 +101,7 @@
 				<div class="col-xs-12">
 					<h1>Oceanstone</h1>
 				</div>
-				<div class="col-xs-4 col-xs-offset-4 where-wrap">	
+				<div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 where-wrap">	
 					<h2>Where?</h2>
 					<p>8650 Peggys Cove Rd,
 					<br>
@@ -105,14 +110,6 @@
 					NS B3Z 3P4</p>
 					<a class="btn" href="https://goo.gl/maps/L8YktnZ22M42">Google Map Link</a>
 				</div>
-					<!--
-					<div class="col-xs-6 venue-wrap">
-						<h3 class="venue-text-right">Where da <br> party at!</h3>
-						<img class="right-arrow" src="img/arrow-right.png" alt="arrow right">
-						<img class="left-arrow" src="img/arrow.png" alt="arrow left">
-						<h3 class="venue-text">Where it's <br> goin' down!</h3></h3>
-					</div>
-					-->
 			</div>
 		</div>
 	</section>
@@ -139,10 +136,10 @@
 							<p><span>IMPORTANT:</span> Units will be reserved on a first come first serve basis for booking.. so don't wait too late or you may not get a spot if you want one. Once immediate family accommodations have been assigned, booking will be opened to guests. Room descriptions will be posted on here to make it easy for you to decide which one you may want to stay in as some have kitchenettes, some have water view etc. However- with events happening both Friday and Saturday we require a two night minimum stay.  Booking priority and confirmation will be given to those booking 2 night stays.</p>
 						</div>
 						<div id="fyi-box-5" class="fyi-box">
-							<p>Friday Sept 8:  The party before the party! We will be having a BBQ dinner for all guests on the beach, lawn games and bon fires... a more relaxing night to drink, mingle and get ready for the big day! </p>
+							<p><span>Friday Sept 8:</span>  The party before the party! We will be having a BBQ dinner for all guests on the beach, lawn games and bon fires... a more relaxing night to drink, mingle and get ready for the big day! </p>
 						</div>
 						<div id="fyi-box-6" class="fyi-box">
-							<p>Saturday Sept 9: The real party - The Wedding! Ceremony, Cocktail hour complete with hors d'ouvres and then Dinner and Dance at the main lodge. </p>
+							<p><span>Saturday Sept 9:</span> The real party - The Wedding! Ceremony, Cocktail hour complete with hors d'ouvres and then Dinner and Dance at the main lodge. </p>
 						</div>
 						<div id="fyi-box-7" class="fyi-box">
 							<p>P.S Looking for something to do Saturday before the wedding? Relax and enjoy the Oceanstone property or take a visit to the beautiful Peggy's Cove, as its only 5 minutes away!</p>
@@ -160,55 +157,59 @@
 	</section>
 <!-- END FYI SECTION ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->	
 <!-- START SQUAD SECTION ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-	<section class="squad-bg text-center scrolling" id="portfolio">
+	<section class="squad-bg text-center no-padding scrolling" id="portfolio">
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row no-gutter">
+
 				<div class="col-xs-12">
 					<h1>The Bridal Party</h1>
 					<h2>In Order of Appearance</h2>
-					<h3>( **tap pictures if on touchscreen )</h3>
+					<h3 class="info-text">( **tap pictures if on touchscreen )</h3>
 				</div>
-				<div class="col-sm-12 col-md-6 col-lg-6 pic" id="pic1">
+
+				<div class="col-xs-12 col-md-6 pic" id="pic1">
 					<div class="portfolio-box">
-						<img src="img/caroline.jpg" alt="maid of honour">
+						<img class="img-responsive" src="img/caroline.jpg" alt="maid of honour">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Caroline Spindler</h2>	
 									<h4>Maid of Honour</h4>
-								</div>
+								</div><!-- ./project-category -->
 								<div class="project-name">
 									Tab and Caroline met in grade 6 on the playground of Gertrude Parker elementary School during lunchtime excel.. Tabitha was attending Smokey Drive and Caroline was attending Gertrude Parker. They would spend lunch hours together until they were reunited in two classes at Leslie Thomas Junior High (Grade 7 band and French immersion). From then on they were known as the "twosome," "school nerds," and "teachers pets." They were inseparable until each went their own path for university. Even though there was distance between them since high school, they remained best friends!
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-12 col-md-6 col-lg-6 pic" id="pic2">
+								</div><!-- ./project-name -->
+							</div><!-- ./portfolio-box-caption-content -->
+						</div><!-- ./portfolio-box-caption -->
+					</div><!-- ./portfolio-box -->
+				</div><!-- ./col-xs-12 -->
+				
+				<div class="col-xs-12 col-md-6 pic" id="pic2">
 					<div class="portfolio-box">
-						<img src="img/shayne.jpg" alt="best man">
+						<img class="img-responsive" src="img/shayne.jpg" alt="best man">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Shayne Bennett</h2>	
 									<h4>Best Man</h4>
-								</div>
+								</div><!-- ./project-category -->
 								<div class="project-name">
-									This is sample text for the bridal party description
+									Sean and Shayne knew each other since the Novice hockey days when they use to shred teams on the ice. Shayne moved from Sackville to Bedford when they were younger and they were on a break for a bit. It was in Grade 12 when they met up again and the bromance continued. Since then they’ve shared many great memories including traveling to Dominican (booked the flight 12 hours before take off), drove to the States (did a nice little 360 going 120 on the highway coming home) and somehow after all the adventures and mischief they’re still alive. They’re the brother that neither one of them had!
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-12 col-md-6 col-lg-6 pic" id="pic3">
+				
+				<div class="col-xs-12 col-md-6 pic" id="pic3">
 					<div class="portfolio-box">
-						<img src="img/emily.jpg" alt="bridesmaid">
+						<img class="img-responsive" src="img/emily.jpg" alt="bridesmaid">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Emily Wells</h2>	
 									<h4>Bridesmaid</h4>
-								</div>
+								</div><!-- ./project-category -->
 								<div class="project-name">
 									Tabitha has known Emily for 24 years!!... she's her sister! Tab and Em are alike in so many ways. They are both stubborn and even though they clash at times, they would do anything for one another. They also share the love of fashion and shopping. Although Emily is Tabitha's younger sister, Tabitha idolizes Em's style and mimics it on a regular basis! Tab has always been thankful for Em keeping her lookin good!
 								</div>
@@ -216,31 +217,33 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-12 col-md-6 col-lg-6 pic" id="pic4">
+				
+				<div class="col-xs-12 col-md-6 pic" id="pic4">
 					<div class="portfolio-box">
-						<img src="img/evan.jpg" alt="groomsman">
+						<img class="img-responsive" src="img/robbie.jpg" alt="groomsman">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
-									<h2>Evan Marshall</h2>	
+									<h2>Robbie Anderson</h2>	
 									<h4>Groomsman</h4>
-								</div>
+								</div><!-- ./project-category -->
 								<div class="project-name">
-									This is sample text for the bridal party description
+									Sean and Robbie became friends in high school. At a high school dance, Robbie was feeling a lil’ under the weather and got Sean and all the guys busted for drinking. Robbie and Sean are basically the same person, Robbie’s just taller and Sean’s the better looking one. There’s only one other person that shares the love of memes more than Sean and that’s Robbie.
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-12 col-md-6 col-lg-6 pic" id="pic5">
+				
+				<div class="col-xs-12 col-md-6 pic" id="pic5">
 					<div class="portfolio-box">
-						<img src="img/jenn.jpg" alt="bridesmaid">
+						<img class="img-responsive" src="img/jenn.jpg" alt="bridesmaid">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Jennifer Flynn</h2>	
 									<h4>Bridesmaid</h4>
-								</div>
+								</div><!-- ./project-category -->
 								<div class="project-name">
 									Tab and Jenn met in Grade 10 when they were both working at The Chickenburger in Bedford. They clicked immediately and became best friends. Their friendship can best be described as "easy" and "natural." They applied to Nursing School together and spent every moment of the 4 years either as study buddies or party animals. After nursing school Jenn moved to Ontario and they kept in touch as much as possible. In 2016 she Jenn returned home. They picked up right where they left off and have since been planning their weddings together!
 								</div>
@@ -248,31 +251,33 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-12 col-md-6 col-lg-6 pic" id="pic6">
+				
+				<div class="col-xs-12 col-md-6 pic" id="pic6">
 					<div class="portfolio-box">
-						<img src="img/robbie.jpg" alt="groomsman">
+						<img class="img-responsive" src="img/josh.jpg" alt="groomsman">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
-									<h2>Robbie Anderson</h2>	
+									<h2>Josh Gillis</h2>	
 									<h4>Groomsman</h4>
-								</div>
+								</div><!-- ./project-category -->
 								<div class="project-name">
-									This is sample text for the bridal party description
+									Sean and Josh have known each other since Elementary school. They literally went to school with each other forever. Josh is a Plastic Surgeon so obviously he must have got his smarts from Sean. In the summer months growing up, Sean and Evan basically lived at the Gillis’s. Even though both their schedules are so busy (mostly Josh’s), whenever back together you know a good time will be had!
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-12 col-md-6 col-lg-6 pic" id="pic7">
+				
+				<div class="col-xs-12 col-md-6 pic" id="pic7">
 					<div class="portfolio-box">
-						<img src="img/katie.jpg" alt="bridesmaid">
+						<img class="img-responsive" src="img/katie.jpg" alt="bridesmaid">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Katie Marshall</h2>	
 									<h4>Bridesmaid</h4>
-								</div>
+								</div><!-- ./project-category -->
 								<div class="project-name">
 									Tabitha knew of Katie in high school... And hated her. Katie's feelings toward Tab were mutual. After Sean and Tab started dating Katie and Tab were kind of forced into a friendship. This was due to Katie's, now husband, and Sean being good friends since elementary school. Katie also ended up in Tabitha's nursing class; they couldn't avoid each other! The inability to avoid each other was the best thing to happen though, because their inevitable friendship became even stronger as the years went on. Now, Tab couldn't imagine Katie not being in her life nor standing at the alter without her!
 								</div>
@@ -280,31 +285,33 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-12 col-md-6 col-lg-6 pic" id="pic8">
+				
+				<div class="col-xs-12 col-md-6 pic" id="pic8">
 					<div class="portfolio-box">
-						<img src="img/josh.jpg" alt="groomsman">
+						<img class="img-responsive" src="img/evan.jpg" alt="groomsman">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
-									<h2>Josh Gillis</h2>	
+									<h2>Evan Marshall</h2>	
 									<h4>Groomsman</h4>
-								</div>
+								</div><!-- ./project-category -->
 								<div class="project-name">
-									This is sample text for the bridal party description
+									Sean has known Evan since Elementary School. Many days growing up were spent shooting some bball outside of Evan’s…well, Evan was mowing the lawn and his friends were playing bball. Lots of decent parties were had at the Marshall residence. Over the years they’ve had some wild adventures including trips to Montreal, Quebec, Maine and St. John’s. They straight thug it everywheres they go earning fame worldwide. Although a lot of their interests are different (Evan prefers men), he’s one of Sean’s closest friends.
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-12 col-md-6 col-lg-6 pic" id="pic9">
+				
+				<div class="col-xs-12 col-md-6 pic" id="pic9">
 					<div class="portfolio-box">
-						<img src="img/tara.jpg" alt="bridesmaid">
+						<img class="img-responsive" src="img/tara.jpg" alt="bridesmaid">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Tara Sobey</h2>	
 									<h4>Bridesmaid</h4>
-								</div>
+								</div><!-- ./project-category -->
 								<div class="project-name">
 									Tabitha has known Tara for 10 years..  Since she started dating Sean. Tara is Sean's sister! Tara has always welcomed Tab into the family with open arms. Tab loves spending time with Tara, with the Sobey clan, or even a moment with just the two of them. One of the best moments of Tab's life was the time she spent celebrating her and Sean's engagement with Tara! Tab couldn't be more excited to welcome Tara as a sister!
 								</div>
@@ -312,31 +319,33 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-12 col-md-6 col-lg-6 pic" id="pic10">
+				
+				<div class="col-xs-12 col-md-6 pic" id="pic10">
 					<div class="portfolio-box">
-						<img src="img/jon.jpg" alt="groomsman">
+						<img class="img-responsive" src="img/jon.jpg" alt="groomsman">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Jon Banfield</h2>	
 									<h4>Groomsman</h4>
-								</div>
+								</div><!-- ./project-category -->
 								<div class="project-name">
-									This is sample text for the bridal party description
+									Sean and Jon became friends in high school and remained boys ever since. Over the years they’ve played many golf rounds together, while Sean takes tips from Jon but unfortunately have never helped out. Even though Jon lives in Calgary now they still keep in touch and always have a great time when they’re back together.
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-12 col-md-12 col-lg-12 pic" id="pic11">
+				
+				<div class="col-xs-12" id="pic11">
 					<div class="portfolio-box">
-						<img src="img/isla.jpg" alt="flower girl">
+						<img class="img-responsive" src="img/isla.jpg" alt="flower girl">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Isla Marshall</h2>	
 									<h4>Flower Girl</h4>
-								</div>
+								</div><!-- ./project-category -->
 								<div class="project-name">
 									Isla is the daughter of one of the Sobey bridemaids and groomsmen; Katie and Evan. Isla is one heck of a little lady. In her first year of life she received a necessary liver transplant from a piece of her mom's liver and has kicked Biliary Atresia in the ass! She is now thriving and is clearly one of the happiest and most social babies a person could meet.. A true princess to walk down the isle!
 								</div>
@@ -353,13 +362,54 @@
 	<section class="story-bg text-center scrolling" id="story">
 		<div class="container-fluid">
 			<div class="row">
+				<h1>Our Story</h1>
 				<div class="col-xs-12">
-					<h1>Our Story</h1>
+					<div class="slider">
+					  	<div class="slider-wrap">
+					  		<h3>The Meet</h3>
+							It was a good old fashion high school party in 2006. An Open house party. Tab was in grade 12. Somehow word spread to Sean and his friends about this party. Sean is in 2nd year university at this time, and went to this party with hopes of picking up a young'in. Well he did. The drinks were flowing and the romance was growing. They "talked" until the wee hours of this morning. 
+				  		</div>
+					  	<div class="slider-wrap">
+					  		<h3>The Exchange</h3>
+					  		After the party, they exchanged MSN usernames. Sean made Tab wait a couple days before adding her, but ultimately got the courage to ask for her number and then a date. Tab wasn't sure if she'd even hear from Sean again after the party (thought he was a playa). 10 years later... you decide! 
+					  	</div>
+					  	<div class="slider-wrap">
+					  		<h3>The Proposal - pt.1</h3>
+					  		It was 9 years to the day. Celebrating their anniversary at the Hollis Hotel Suite before a dinner reservation at 730pm. Tab was getting ready while Sean was nervously awaiting her to finally be finished. (She's always so quick to get ready). 
+					  	</div>
+					  	<div class="slider-wrap">
+					  		<h3>The Proposal - pt.2</h3>
+					  		When Tab asked if Sean liked her outfit he stated that something was missing and led her down a hallway of rose petals to a heart shape of rose petals where it all went down.
+					  	</div>
+					  	<div class="slider-wrap">
+					  		<h3>The Proposal - pt.3</h3>
+					  		With Ed Sheeran serenading in the background, Sean got down on one knee and FINALLY asked his bride to be! She thought about it for a while but eventually agreed. Shortly after.. Tab was worried they were late for dinner, but Sean had lied as he had dinner booked for 8, not 730pm. 
+					  	</div>
+					  	<div class="slider-wrap">
+					  		<h3>The Proposal - pt.4</h3>
+					  		They popped a bottle of champagne and went to dinner at Story's.  After dinner they face timed friends and family back at the hotel and then celebrated together out in Halifax until 4am.
+					  	</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 <!-- END DEETS SECTION /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- START FOOTER SECTION //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<footer class="footer-bg text-center scrolling" id="footer">
+		<div class="container-fluid">
+			<div class="row footer-wrap">
+				<div class="col-xs-6 text-left">
+					This website was designed with <span>pazazz</span>&#44; by <a class="link" href="http://www.gigglesnshit.com/">Evan Marshall</a>. The handsome ginger in the wedding party...
+				</div>
+				<div class="col-xs-3 col-xs-offset-3 text-right">
+					<a class="top" href="#page-top">Back to Top</a>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- END FOOTER SECTION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <!-- START RSVP FORM & PHP /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- Modal -->
@@ -395,20 +445,6 @@
 							<input required type="email" name="formemail" class="form-control" placeholder="Please enter your email address">
 						</div>
 						<hr>
-						<div class="select">
-							<label>
-								<h2># of Guests in your Party?</h2>
-								<h4>( as addressed on your invitation )</h4>
-							</label>
-							<select name="formguests" class="form-control">
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-							</select>
-						</div>
 						<div class="textarea">
 							<label><h2>Guest Names:</h2></label>
 							  <textarea name="formguestnames" class="form-control" rows="6" placeholder="Please enter the full name of any extra guests joining you..."></textarea>
@@ -457,7 +493,6 @@
 			$serverattend = test_input($_POST["formattend"]);
 			$serverfullname = test_input($_POST["formfullname"]);
 			$serveremail = test_input($_POST["formemail"]);
-			$serverguests = test_input($_POST["formguests"]);
 			$serverguestnames = test_input($_POST["formguestnames"]);
 			$serverextras = test_input($_POST["formextras"]);
 
@@ -465,12 +500,11 @@
 			$serverattend = mysqli_real_escape_string($conn, $serverattend);
 			$serverfullname = mysqli_real_escape_string($conn, $serverfullname);
 			$serveremail = mysqli_real_escape_string($conn, $serveremail);
-			$serverguests = mysqli_real_escape_string($conn, $serverguests);
 			$serverguestnames = mysqli_real_escape_string($conn, $serverguestnames);
 			$serverextras = mysqli_real_escape_string($conn, $serverextras);
 
-			$sql = "INSERT INTO rsvp (dbrsvp, dbattend, dbfullname, dbemail, dbguests, dbguestnames, dbextras, rsvpdate)
-			VALUES ('$serverrsvp', '$serverattend', '$serverfullname', '$serveremail', '$serverguests', '$serverguestnames', '$serverextras',NOW())";
+			$sql = "INSERT INTO rsvp (dbrsvp, dbattend, dbfullname, dbemail, dbguestnames, dbextras, rsvpdate)
+			VALUES ('$serverrsvp', '$serverattend', '$serverfullname', '$serveremail', '$serverguestnames', '$serverextras',NOW())";
 
 			if ($conn->query($sql) === TRUE) {
 				echo "<script type= 'text/javascript'>alert('Looking forward to seeing ya break it down on the dance floor!');</script>";
@@ -489,6 +523,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
+	<!-- SLICK CAROUSEL JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+	<script src="js/my-slick.js"></script>
 
 </body>
 <!-- END BODY SECTION //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->

@@ -36,7 +36,7 @@
 				die("Connection failed: " . $conn->connect_error);
 			}
 		
-			$q = "SELECT id, dbrsvp, dbattend, dbfullname, dbemail, dbguests, dbguestnames, dbextras, DATE_FORMAT(rsvpdate, '%M %d, %Y') AS dr, id FROM rsvp ORDER BY rsvpdate ASC";
+			$q = "SELECT id, dbrsvp, dbattend, dbfullname, dbemail, dbguestnames, dbextras, DATE_FORMAT(rsvpdate, '%M %d, %Y') AS dr, id FROM rsvp ORDER BY rsvpdate ASC";
 
 			$r = mysqli_query($conn, $q);
 		
@@ -56,7 +56,6 @@
 								<th>Friday Attendance</th>
 								<th>Name</th>
 								<th>Email</th>
-								<th># of Extra Guests</th>
 								<th>Extra Guest Name(s)</th>
 								<th>Comments</th>
 								<th>Date of RSVP</th>
@@ -73,7 +72,6 @@
 							<td>".$row['dbattend']."</td>
 							<td>".$row['dbfullname']."</td>
 							<td>".$row['dbemail']."</td>
-							<td>".$row['dbguests']."</td>
 							<td>".$row['dbguestnames']."</td>
 							<td>".$row['dbextras']."</td>
 							<td>".$row['dr']."</td>

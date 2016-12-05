@@ -1,0 +1,47 @@
+/* NAV CSS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.navbar-default{
+	text-align:center;
+}
+.navbar-default .navbar-brand{
+	display:none;
+}
+.navbar-default .navbar-nav li a{
+	font-size:1em;
+	color:#000000;
+	line-height:1px;
+}
+
+/* FYI CSS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.embed-responsive{
+	margin-bottom:100px;
+}
+.fyi-bg{
+	text-align:center;
+}
+
+/* SQUAD CSS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.project-category h2{
+	line-height:0.3em;
+	font-family: 'Tangerine', cursive;
+	color:#896F8F;
+	text-shadow: 2px 2px 2px #000000;
+}
+.project-category h4{
+	font-size:1.2em;
+	font-family: 'Tangerine', cursive;
+	color:#ffffff;
+	text-shadow: 2px 2px 2px #000000;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    font-size: 1.5em;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+	line-height:1.2em;
+    font-size: 1.2em;
+}
+.info-text{
+	display:block;
+}

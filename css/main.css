@@ -13,6 +13,7 @@ body{
 	position:relative;
 	font-family: 'Tenali Ramakrishna', sans-serif;
 	overflow-y: scroll;
+	width:100%;
 }
 .affix {
    	top:0;
@@ -81,8 +82,6 @@ hr {
 	background-position:50% 0%;
 	background-repeat:no-repeat;
 	background-size:cover;
-	width:100%;
-	height:100%;
 }
 .hero-bg h1{
 	color:#C1B3C4;
@@ -136,8 +135,6 @@ hr {
 	background-position:50% 100%;
 	background-repeat:no-repeat;
 	background-size:cover;
-	width:100%;
-	height:100%;
 }
 .resort-bg h1{
 	color:#F8F1FA;
@@ -388,8 +385,6 @@ select.form-control{
 	background-position:50% 0%;
 	background-repeat:no-repeat;
 	background-size:cover;
-	width:100%;
-	height:100%;
 }
 .story-bg h1{
 	color:#C1B3C4;
