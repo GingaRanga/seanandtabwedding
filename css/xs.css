@@ -8,8 +8,11 @@
 }
 .navbar-default .navbar-nav li a{
 	font-size:1em;
-	color:#000000;
+	color:#ffffff;
 	line-height:1px;
+}
+div.navbar-collapse.collapse.in{
+	background-color:#C1B3C4;
 }
 
 /* FYI CSS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
