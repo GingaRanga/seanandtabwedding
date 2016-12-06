@@ -74,6 +74,7 @@ hr {
 	-webkit-transition:all 0.5s ease-in-out;
 }
 
+
 /* HERO CSS /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .hero-bg{
@@ -222,6 +223,7 @@ hr {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
 /* SQUAD CSS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .squad-bg{
@@ -316,6 +318,7 @@ hr {
 	padding-bottom:50px;
 }
 
+
 /* RSVP CSS /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .textarea{
@@ -404,7 +407,7 @@ select.form-control{
 	font-size:1.5em;
 }
 .slider-wrap{
-	padding:2%;
+	padding:0;
 	margin-bottom:2%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	background: rgba(193,179,196,0.7);
@@ -419,6 +422,24 @@ select.form-control{
 .slick-prev, .slick-next{
 	z-index: 9999 !important;
 	margin:0 50px;
+}
+#slider-1{
+	padding:50px 0;
+}
+#slider-2{
+	padding:65px 0;
+}
+#slider-3{
+	padding:65px 0;
+}
+#slider-4{
+	padding:80px 0;
+}
+#slider-5{
+	padding:65px 0;
+}
+#slider-6{
+	padding:65px 0;
 }
 
 /* FOOTER CSS ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -438,29 +459,26 @@ select.form-control{
 	text-transform:uppercase;
 }
 .link{
-	padding:20px 2%;
+	padding:20px 0;
 	color:#ffffff;
-	text-shadow:2px 2px 2px #C1B3C4;
 	transition:all 0.5s ease-in-out;
 	-moz-transition:all 0.5s ease-in-out;
 	-webkit-transition:all 0.5s ease-in-out;
 }
 .link:hover{
-	background-color:#896F8F;
-	color:#ffffff;
-	text-shadow:2px 2px 2px #000000;
+	color:#896F8F;
 	text-decoration:none;
 	transition:all 0.5s ease-in-out;
 	-moz-transition:all 0.5s ease-in-out;
 	-webkit-transition:all 0.5s ease-in-out;
 }
 .top{
-	padding:20px 2%;
+	padding:20px 1%;
 	border-color:#33B89B;
 	border-radius:0;
 	color:#ffffff;
 	text-shadow:2px 2px 2px #000000;
-	background-color:#33B89B;
+	background-color:transparent;
 	transition:all 0.5s ease-in-out;
 	-moz-transition:all 0.5s ease-in-out;
 	-webkit-transition:all 0.5s ease-in-out;

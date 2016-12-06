@@ -17,10 +17,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Tangerine|Tenali+Ramakrishna" rel="stylesheet">
 	<!-- MAIN CSS -->
 	<link href="css/lg.css" rel="stylesheet">
-	<link href="css/xs.css" rel="stylesheet" media="screen and (max-width:768px)">
-	<link href="css/sm.css" rel="stylesheet" media="screen and (max-width: 992px) and (min-width: 769px)">
-	<link href="css/md.css" rel="stylesheet" media="screen and (max-width: 1200px) and (min-width: 993px)">
-	<!--<link href="css/max666landscape.css" rel="stylesheet" media="screen and (orientation:landscape)">-->
+	<link href="css/xs.css" rel="stylesheet" media="screen and (max-width:770px)">
+	<!--
+	<link href="css/sm.css" rel="stylesheet" media="screen and (max-width: 995px) and (min-width: 771px)">
+	<link href="css/md.css" rel="stylesheet" media="screen and (max-width: 1205px) and (min-width: 996px)">
+	<link href="css/max666landscape.css" rel="stylesheet" media="screen and (orientation:landscape)">
+	-->
 	<!-- SLICK CAROUSEL CSS-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
@@ -365,27 +367,27 @@
 				<h1>Our Story</h1>
 				<div class="col-xs-12">
 					<div class="slider">
-					  	<div class="slider-wrap">
+					  	<div class="slider-wrap" id="slider-1">
 					  		<h3>The Meet</h3>
 							It was a good old fashion high school party in 2006. An Open house party. Tab was in grade 12. Somehow word spread to Sean and his friends about this party. Sean is in 2nd year university at this time, and went to this party with hopes of picking up a young'in. Well he did. The drinks were flowing and the romance was growing. They "talked" until the wee hours of this morning. 
 				  		</div>
-					  	<div class="slider-wrap">
+					  	<div class="slider-wrap" id="slider-2">
 					  		<h3>The Exchange</h3>
 					  		After the party, they exchanged MSN usernames. Sean made Tab wait a couple days before adding her, but ultimately got the courage to ask for her number and then a date. Tab wasn't sure if she'd even hear from Sean again after the party (thought he was a playa). 10 years later... you decide! 
 					  	</div>
-					  	<div class="slider-wrap">
+					  	<div class="slider-wrap" id="slider-3">
 					  		<h3>The Proposal - pt.1</h3>
 					  		It was 9 years to the day. Celebrating their anniversary at the Hollis Hotel Suite before a dinner reservation at 730pm. Tab was getting ready while Sean was nervously awaiting her to finally be finished. (She's always so quick to get ready). 
 					  	</div>
-					  	<div class="slider-wrap">
+					  	<div class="slider-wrap" id="slider-4">
 					  		<h3>The Proposal - pt.2</h3>
 					  		When Tab asked if Sean liked her outfit he stated that something was missing and led her down a hallway of rose petals to a heart shape of rose petals where it all went down.
 					  	</div>
-					  	<div class="slider-wrap">
+					  	<div class="slider-wrap" id="slider-5">
 					  		<h3>The Proposal - pt.3</h3>
 					  		With Ed Sheeran serenading in the background, Sean got down on one knee and FINALLY asked his bride to be! She thought about it for a while but eventually agreed. Shortly after.. Tab was worried they were late for dinner, but Sean had lied as he had dinner booked for 8, not 730pm. 
 					  	</div>
-					  	<div class="slider-wrap">
+					  	<div class="slider-wrap" id="slider-6">
 					  		<h3>The Proposal - pt.4</h3>
 					  		They popped a bottle of champagne and went to dinner at Story's.  After dinner they face timed friends and family back at the hotel and then celebrated together out in Halifax until 4am.
 					  	</div>
@@ -400,15 +402,15 @@
 	<footer class="footer-bg text-center scrolling" id="footer">
 		<div class="container-fluid">
 			<div class="row footer-wrap">
-				<div class="col-xs-6 text-left">
-					This website was designed with <span>pazazz</span>&#44; by <a class="link" href="http://www.gigglesnshit.com/">Evan Marshall</a>. The handsome ginger in the wedding party...
+				<div class="col-xs-12">
+					This website was designed with <span>love</span>&#44; by <span><a class="link" href="#">Evan Marshall</a></span>. The handsome ginger in the wedding party...
 				</div>
-				<div class="col-xs-3 col-xs-offset-3 text-right">
-					<a class="top" href="#page-top">Back to Top</a>
+				<div class="">
+					<a class="navbar navbar-default navbar-fixed-bottom top col-xs-2 col-xs-offset-10" href="#page-top">Back to Top</a>
 				</div>
 			</div>
 		</div>
-	</section>
+	</footer>
 <!-- END FOOTER SECTION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <!-- START RSVP FORM & PHP /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
