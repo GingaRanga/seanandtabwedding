@@ -10,11 +10,16 @@
 	<!-- FAVICON -->
 	<link rel="shortcut icon" href="img/icon.png" type="image/png">
 	<!-- BOOTSTRAP CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
 	<!-- FONT AWESOME -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Tangerine|Tenali+Ramakrishna" rel="stylesheet">
+	<!-- SLICK CAROUSEL CSS-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" integrity="sha256-jySGIHdxeqZZvJ9SHgPNjbsBP8roij7/WjgkoGTJICk=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" integrity="sha256-WmhCJ8Hu9ZnPRdh14PkGpz4PskespJwN5wwaFOfvgY8=" crossorigin="anonymous" />
+	<!-- SWIPER CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css" integrity="sha256-qmCTrpLvkz/GexFbP14i9p8vymHbYOEQEZflvEKaXHU=" crossorigin="anonymous" />
 	<!-- MAIN CSS -->
 	<link href="css/lg.css" rel="stylesheet">
 	<link href="css/xs.css" rel="stylesheet" media="screen and (max-width:770px)">
@@ -23,9 +28,6 @@
 	<link href="css/md.css" rel="stylesheet" media="screen and (max-width: 1205px) and (min-width: 996px)">
 	<link href="css/max666landscape.css" rel="stylesheet" media="screen and (orientation:landscape)">
 	-->
-	<!-- SLICK CAROUSEL CSS-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,7 +45,7 @@
 	<header class="hero-bg text-center">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-xs-12 hero-text">
 					<h1>Sean &amp; Tabitha</h1>
 					<a href="#"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">RSVP</button></a>
 				</div>
@@ -172,7 +174,7 @@
 				<div class="col-xs-12 col-md-6 pic" id="pic1">
 					<div class="portfolio-box">
 						<img class="img-responsive" src="img/caroline.jpg" alt="maid of honour">
-						<div class="portfolio-box-caption">
+						<div onClick="" class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Caroline Spindler</h2>	
@@ -189,7 +191,7 @@
 				<div class="col-xs-12 col-md-6 pic" id="pic2">
 					<div class="portfolio-box">
 						<img class="img-responsive" src="img/shayne.jpg" alt="best man">
-						<div class="portfolio-box-caption">
+						<div onClick="" class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Shayne Bennett</h2>	
@@ -206,7 +208,7 @@
 				<div class="col-xs-12 col-md-6 pic" id="pic3">
 					<div class="portfolio-box">
 						<img class="img-responsive" src="img/emily.jpg" alt="bridesmaid">
-						<div class="portfolio-box-caption">
+						<div onClick="" class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Emily Wells</h2>	
@@ -223,7 +225,7 @@
 				<div class="col-xs-12 col-md-6 pic" id="pic4">
 					<div class="portfolio-box">
 						<img class="img-responsive" src="img/robbie.jpg" alt="groomsman">
-						<div class="portfolio-box-caption">
+						<div onClick="" class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Robbie Anderson</h2>	
@@ -240,7 +242,7 @@
 				<div class="col-xs-12 col-md-6 pic" id="pic5">
 					<div class="portfolio-box">
 						<img class="img-responsive" src="img/jenn.jpg" alt="bridesmaid">
-						<div class="portfolio-box-caption">
+						<div onClick="" class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Jennifer Flynn</h2>	
@@ -257,7 +259,7 @@
 				<div class="col-xs-12 col-md-6 pic" id="pic6">
 					<div class="portfolio-box">
 						<img class="img-responsive" src="img/josh.jpg" alt="groomsman">
-						<div class="portfolio-box-caption">
+						<div onClick="" class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Josh Gillis</h2>	
@@ -274,7 +276,7 @@
 				<div class="col-xs-12 col-md-6 pic" id="pic7">
 					<div class="portfolio-box">
 						<img class="img-responsive" src="img/katie.jpg" alt="bridesmaid">
-						<div class="portfolio-box-caption">
+						<div onClick="" class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Katie Marshall</h2>	
@@ -291,7 +293,7 @@
 				<div class="col-xs-12 col-md-6 pic" id="pic8">
 					<div class="portfolio-box">
 						<img class="img-responsive" src="img/evan.jpg" alt="groomsman">
-						<div class="portfolio-box-caption">
+						<div onClick="" class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Evan Marshall</h2>	
@@ -309,7 +311,7 @@
 					<div class="portfolio-box">
 						<img class="img-responsive" src="img/tara.jpg" alt="bridesmaid">
 						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
+							<div onClick="" class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Tara Sobey</h2>	
 									<h4>Bridesmaid</h4>
@@ -325,7 +327,7 @@
 				<div class="col-xs-12 col-md-6 pic" id="pic10">
 					<div class="portfolio-box">
 						<img class="img-responsive" src="img/jon.jpg" alt="groomsman">
-						<div class="portfolio-box-caption">
+						<div onClick="" class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Jon Banfield</h2>	
@@ -342,7 +344,7 @@
 				<div class="col-xs-12" id="pic11">
 					<div class="portfolio-box">
 						<img class="img-responsive" src="img/isla.jpg" alt="flower girl">
-						<div class="portfolio-box-caption">
+						<div onClick="" class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category">
 									<h2>Isla Marshall</h2>	
@@ -398,6 +400,56 @@
 	</section>
 <!-- END DEETS SECTION /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
+<!-- START GALLERY SECTION /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<section class="gallery-bg text-center scrolling" id="gallery">
+		<div class="container-fluid">
+			<div class="row">
+				<!-- Swiper -->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="img/gallery/firstyeardate2007.jpg" alt="first year dating">First year dating, 2007</div>
+						<div class="swiper-slide"><img src="img/gallery/firsttripmexico2008.JPG" alt="first trip together">First trip, Mexico 08'</div>
+						<div class="swiper-slide"><img src="img/gallery/mayanruins2011.JPG" alt="mayan ruins">Mayan ruins, 2011</div>
+						<div class="swiper-slide"><img src="img/gallery/lombardstsanfran.jpg" alt="lombard street san fran">Lombard st. San Fran</div>
+						<div class="swiper-slide"><img src="img/gallery/annualkenjithanksgiv.jpg" alt="annual keji thanksgiving">Annual Keji Thanksgiving</div>
+						<div class="swiper-slide"><img src="img/gallery/bellagiovegas.jpg" alt="bellagio las vegas">Bellagio, Vegas</div>
+						<div class="swiper-slide"><img src="img/gallery/brunelloestatesgolf.jpg" alt="brunello estates golfing">Brunello Estates, golfing</div>
+						<div class="swiper-slide"><img src="img/gallery/candlestickparksanfran.jpg" alt="candlestick park san fran">Candlestick Park, San Fran</div>
+						<div class="swiper-slide"><img src="img/gallery/crabbemountain.jpg" alt="crabbe mtn skiing">Crabbe mtn, skiing</div>
+						<div class="swiper-slide"><img src="img/gallery/dirtynellys.jpg" alt="dirty nellys halifax">Dirty Nellys, Halifax</div>
+						<div class="swiper-slide"><img src="img/gallery/fenwaypark.jpg" alt="fenway park">Fenway Park</div>
+						<div class="swiper-slide"><img src="img/gallery/goldengatesanfran.jpg" alt="golden gate bridge">Golden Gate Bridge</div>
+						<div class="swiper-slide"><img src="img/gallery/grandcanyonarizona.jpg" alt="grand canyon arizona">Grand Canyon, Arizona</div>
+						<div class="swiper-slide"><img src="img/gallery/helicoptervegasstrip.jpg" alt="helicopter vegas strip">Helicopter over Vegas strip</div>
+						<div class="swiper-slide"><img src="img/gallery/mugs.jpg" alt="mean muggin">Mean muggin'</div>
+						<div class="swiper-slide"><img src="img/gallery/newyearseve.jpg" alt="new years eve">New Years Eve</div>
+						<div class="swiper-slide"><img src="img/gallery/ottawa.jpg" alt="ottawa">Ottawa</div>
+						<div class="swiper-slide"><img src="img/gallery/signalhill.jpg" alt="signal hill newfoundland">Signal Hill, Newfoundland</div>
+						<div class="swiper-slide"><img src="img/gallery/stmartinport.jpg" alt="st maarten port">St. Maarten Port</div>
+						<div class="swiper-slide"><img src="img/gallery/turksncaicos.jpg" alt="turks and caicos">Turks and Caicos</div>
+						<div class="swiper-slide"><img src="img/gallery/ziplinepuertorico.jpg" alt="ziplining puerto rico">Ziplining, Puerto Rico</div>
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- END GALLERY SECTION ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- START INSTAGRAM SECTION ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<section class="instagram-bg text-center scrolling" id="instagram">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-4">
+					
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- END INSTAGRAM SECTION /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
 <!-- START FOOTER SECTION //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	<footer class="footer-bg text-center scrolling" id="footer">
 		<div class="container-fluid">
@@ -449,7 +501,7 @@
 						<hr>
 						<div class="textarea">
 							<label><h2>Guest Names:</h2></label>
-							  <textarea name="formguestnames" class="form-control" rows="6" placeholder="Please enter the full name of any extra guests joining you..."></textarea>
+							  <textarea name="formguestnames" class="form-control" rows="6" placeholder="Please enter the full name of all guests in your party, as addressed on your invitation..."></textarea>
 						</div>
 						<hr>
 						<span>**Meal to be served at wedding will be NUGGIES!!</span>
@@ -520,14 +572,36 @@
 <!-- END RSVP FORM & PHP ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	
 	<!-- JQUERY -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<!-- BOOTSTRAP JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+	<!-- GSAP JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js" integrity="sha256-NsDsBdeb2dMWTv/D7KDxlizW+Cux9ByyEuCAkQviQVM=" crossorigin="anonymous"></script>
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
 	<!-- SLICK CAROUSEL JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js" integrity="sha256-4Cr335oZDYg4Di3OwgUOyqSTri0jUm2+7Gf2kH3zp1I=" crossorigin="anonymous"></script>
 	<script src="js/my-slick.js"></script>
+	<!-- SWIPER JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js" integrity="sha256-mPcYboxAQddS1GRB/EMb+sp0NBVB5oTBwRMv/y5hoOg=" crossorigin="anonymous"></script>
+	<!-- SWIPER INIT -->
+    <script>
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 3,
+			nextButton: '.swiper-button-next',
+        	prevButton: '.swiper-button-prev',
+			loop: 'true',
+			spaceBetween: 30,
+			// Responsive breakpoints
+  			breakpoints: {
+    			// when window width is <= 770px
+    			770: {
+      			slidesPerView: 1,
+      			spaceBetween: 0
+    			},
+			}
+    	});
+    </script>
 
 </body>
 <!-- END BODY SECTION //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->

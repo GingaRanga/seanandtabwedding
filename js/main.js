@@ -1,3 +1,14 @@
+	
+	//using javascript
+	var hero = document.getElementsByClassName('hero-text');
+	
+	/*in bracket you have the element, duration, {animation}. the to means we animate to the parameters and from means we animate from. you can have fromto to determine start and end parameters. You can use set method to just set the css values and you remove duration property. autoalpha property fades an element in if you use the from method and set autoalpha at 0. If you set a delay as the duration of the first tween then it will start in sequence*/
+	TweenLite.from(hero, 2, {autoAlpha: 0});
+
+	/*ease:Power0.easeNone is the syntax for ease. power can be 0 to 4. instead of easeNone you can do easeIn to add an ease animation. easeIn starts slow and ends fast*/
+	
+
+
 /////////////////////////////////////////////////////////////////////     SCROLLMAGIC INIT     ///////////////////////////////////////////////////////
 
 
