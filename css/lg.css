@@ -30,6 +30,7 @@ hr {
     border: 0;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
+a, a:hover, a:active{ outline:0px !important}
 
 /* NAV CSS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -127,6 +128,28 @@ hr {
 .countdown-bg span{
 	color:#33B89B;
 }
+.atc-style-blue .atcb-link{
+	font-family: 'Tenali Ramakrishna', sans-serif;
+	border-radius:0;
+	color:#ffffff;
+	text-shadow:2px 2px 2px #000000;
+	background-color:#33B89B;
+	text-transform:uppercase;
+	font-weight:bold;
+	transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+}
+.atc-style-blue .atcb-link:hover,
+.atc-style-blue .atcb-link:active,
+.atc-style-blue .atcb-link:focus{
+	background-color:#896F8F;
+	color:#ffffff;
+	text-shadow:2px 2px 2px #000000;
+	transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+}
 
 /* VENUE CSS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -196,7 +219,7 @@ hr {
 	text-align:left;
 }
 .fyi-wrap{
-	padding:150px 1%;
+	padding:100px 1%;
 }
 .fyi-wrap h1{
 	color:#33B89B;
@@ -441,6 +464,9 @@ select.form-control{
 #slider-6{
 	padding:65px 0;
 }
+.slick-slide img{
+	display:inline;
+}
 
 /* GALLERY CSS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -449,6 +475,121 @@ select.form-control{
 	height: 100%;
 }
 .swiper-button-next, .swiper-button-prev{
+}
+.gallery-bg{
+	background-color:#F8F1FA;
+	position:relative;
+	padding-bottom:660px;
+}
+.gallery-bg h1{
+	color:#33B89B;
+	font-size:4em;
+	padding:100px 0;
+}
+.swiper-slide{
+    position: relative;
+}
+.swiper-slide .swiper-text {
+    position: absolute;
+	top:50%;
+	width:100%;
+	color:#ffffff;
+	font-size:2em;
+    text-align: center;
+    transform: translateY(-50%);
+	text-shadow: 2px 2px 2px #000000;
+}
+
+/* INSTAGRAM CSS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.insta-wrap{
+	background-color:#ffffff;
+	position:absolute;
+	z-index:8888;
+	bottom:10px;
+	height:620px;
+	margin-bottom:100px;
+}
+h3.tweet-text{
+	color:#33B89B;
+	text-transform:uppercase;
+	font-weight:bolder;
+}
+.tweet-text{
+	text-align:left;
+	font-size:1.5em;
+}
+.insta-sm{
+	display:none;
+}
+h3.insta-text{
+	color:#33B89B;
+	text-transform:uppercase;
+	font-weight:bolder;
+}
+.insta-text{
+	text-align:right;
+	font-size:1.5em;
+}
+.gallery-bg h2{
+	padding:0 0 30px 0;
+	color:#C1B3C4;
+	text-shadow: 1px 1px 1px #000000;
+}
+.social-link{
+	margin:0 0 0 68px;
+	display:block;
+	overflow:hidden;
+	list-style:none;
+}
+.social-link li{
+	float:left;
+	margin-right:8px;
+}
+.social-link li a{
+	display:block;
+	width:50px;
+	height:50px;
+	text-align:center;
+	line-height:60px;
+	font-size:25px;
+	color:#fff;
+	background:#222222;
+	border-radius:50%;
+	transition:all 0.3s ease-in-out;
+}
+.social-link li a:hover, .social-link li a:focus{
+	text-decoration:none;
+}
+.twitter a:hover {
+	background: #55acee;
+}
+.instagram a:hover {
+	background: #c13584;
+}
+
+/* INSTAGRAM CSS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.registry-bg{
+	background-color:#C1B3C4;
+	padding:25px 0;
+}
+.registry-bg h1{
+	opacity:0.5;
+}/* coming soon note temporary */
+.registry-bg ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+	text-align:center;
+}
+.registry-bg ul li{
+	margin:0 15px;
+	display:inline;
+}
+.registry-bg ul a{
+	display:inline-block;
+	margin:0 20px;
 }
 
 /* FOOTER CSS ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */

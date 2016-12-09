@@ -1,0 +1,13 @@
+.navbar-default .navbar-brand{
+	font-size:3.5em;
+	line-height:60px;
+}
+.navbar-default .navbar-nav li a{
+	font-size:1.5em;
+}
+.gallery-bg{
+	padding-bottom:1200px;
+}
+.insta-wrap{
+	height:1200px;
+}

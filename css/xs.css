@@ -18,11 +18,40 @@
 div.navbar-collapse.collapse.in{
 	background-color:#C1B3C4;
 }
+/*Change bootstrap navbar collapse breakpoint from 768px
+
+.navbar-header {
+	float: none;
+}
+.navbar-toggle {
+	display: block;
+}
+.navbar-collapse {
+	border-top: 1px solid transparent;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.navbar-collapse.collapse {
+	display: none!important;
+}
+.navbar-nav {
+	float: none!important;
+	margin: 7.5px -15px;
+}
+.navbar-nav>li {
+	float: none;
+}
+.navbar-nav>li>a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}*/
 
 /* HERO CSS /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .hero-bg{
 	background-attachment: scroll;
+}
+.hero-bg h1{
+	padding:200px 0 0;
 }
 
 /* FYI CSS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -32,6 +61,19 @@ div.navbar-collapse.collapse.in{
 }
 .fyi-bg{
 	text-align:center;
+}
+.fyi-wrap{
+	padding:50px 2%;
+}
+.fyi-wrap h1{
+	padding-bottom:50px;
+}
+.fyi-text p{
+	margin:2%;
+	text-align:center;
+}
+.fyi-promo{
+	padding:0;
 }
 
 /* VENUE CSS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -67,10 +109,67 @@ div.navbar-collapse.collapse.in{
 .no-gutter h3 {
 display:block;
 }
+.squad-bg h1{
+	margin-bottom:0;
+	padding:0;
+	font-size:3em;
+}
+.squad-bg h2{
+	margin:0;
+	font-size:2em;
+	padding:0;
+}
+.squad-bg h3{
+	margin:0;
+	font-size:1.5em;
+}
 
 /* STORY CSS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .story-bg{
 	background-attachment:scroll;
 	background-position:30% 50%;
+}
+.slider{
+	padding:50px 0;
+	font-size:1.5em;
+}
+#slider-3{
+	padding:80px 0;
+}
+#slider-4{
+	padding:110px 0;
+}
+#slider-5{
+	padding:80px 0;
+}
+#slider-6{
+	padding:110px 0;
+}
+#slider-7{
+	padding:75px 0;
+}
+
+/* GALLERY CSS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.gallery-bg{
+	padding-bottom:1050px;
+}
+.insta-wrap{
+	height:1020px;
+}
+.gallery-bg h2{
+	padding:0;
+}
+.tweet-text{
+	text-align:center;
+}
+.insta-text{
+	text-align:center;
+}
+.insta-sm{
+	display:block;
+}
+.insta-lg{
+	display:none;
 }

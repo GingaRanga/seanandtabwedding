@@ -11,10 +11,26 @@
 	<link rel="shortcut icon" href="img/icon.png" type="image/png">
 	<!-- BOOTSTRAP CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+	<!-- FACEBOOK GRAPH DATA -->
+    <meta property="og:url" content="http://www.soontobesobey.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sobey Wedding Website" />
+    <meta property="og:description" content="Sean and Tabitha are getting married" />
+    <meta property="og:image" content="http://www.soontobesobey.com/img/gallery/firstyeardate2007.jpg" />
+    <meta property="fb:app_id" content="970981369664540"/>
+    <meta property="og:site_name" content="Sobey Wedding Website"/>
+	<!-- TWITTER SHARE CARD -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@tabithawells" />
+    <meta name="twitter:creator" content="@gigglesshitblog" />
+    <meta name="twitter:title" content="The Sobey Wedding" />
+    <meta name="twitter:description" content="#keepingtabsonsean" />
 	<!-- FONT AWESOME -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Tangerine|Tenali+Ramakrishna" rel="stylesheet">
+	<!-- ADDTOCALENDAR CSS -->
+	<link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
 	<!-- SLICK CAROUSEL CSS-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" integrity="sha256-jySGIHdxeqZZvJ9SHgPNjbsBP8roij7/WjgkoGTJICk=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" integrity="sha256-WmhCJ8Hu9ZnPRdh14PkGpz4PskespJwN5wwaFOfvgY8=" crossorigin="anonymous" />
@@ -23,8 +39,9 @@
 	<!-- MAIN CSS -->
 	<link href="css/lg.css" rel="stylesheet">
 	<link href="css/xs.css" rel="stylesheet" media="screen and (max-width:770px)">
+	
 	<!--
-	<link href="css/sm.css" rel="stylesheet" media="screen and (max-width: 995px) and (min-width: 771px)">
+	<link href="css/sm.css" rel="stylesheet" media="screen and (max-width: 1150px) and (min-width: 915px)">
 	<link href="css/md.css" rel="stylesheet" media="screen and (max-width: 1205px) and (min-width: 996px)">
 	<link href="css/max666landscape.css" rel="stylesheet" media="screen and (orientation:landscape)">
 	-->
@@ -40,14 +57,27 @@
 
 <!-- START BODY SECTION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="25">
+	<!-- ADDTOCALENDAR SCRIPT -->
+	<script type="text/javascript">
+		(function () {
+    		if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+            if (window.ifaddtocalendar == undefined) { 
+				window.ifaddtocalendar = 1;
+				var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+				s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+				s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
+			var h = d[g]('body')[0];h.appendChild(s); 
+			}
+		})();
+    </script>
 
 <!-- START HERO SECTION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	<header class="hero-bg text-center">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 hero-text">
-					<h1>Sean &amp; Tabitha</h1>
-					<a href="#"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">RSVP</button></a>
+				<div class="col-xs-12">
+					<h1 class="hero-text">Sean &amp; Tabitha</h1>
+					<a class="hero-btn" href="#"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">RSVP</button></a>
 				</div>
 			</div>
 		</div>
@@ -73,7 +103,7 @@
 					<li><a class="page-scroll" href="#resort">Venue</a></li>
 					<li><a class="page-scroll" href="#fyi">FYI</a></li>
 					<li><a class="page-scroll" href="#portfolio">The Squad</a></li>
-					<li><a class="page-scroll" href="#story">Our Deets</a></li>
+					<li><a class="page-scroll" href="#story">Our Story</a></li>
 					<li><a class="page-scroll" href="#gallery">Moments</a></li>
 					<li><a class="page-scroll" href="#registry">Spoil Us</a></li>
 				</ul>
@@ -91,7 +121,19 @@
 					<p>on September 9<sup>th</sup> 2017</p>
 					<span>Sean Andrew Sobey & Tabitha Michele Wells</span>
 					<p>Will be Husband &amp; Wife!!</p>
-					<span><i class="fa fa-venus-mars fa-2x" aria-hidden="true"></i></span>
+					<span><i class="fa fa-venus-mars fa-2x" aria-hidden="true"></i></span><br>
+					<span class="addtocalendar atc-style-blue">
+						<var class="atc_event">
+							<var class="atc_date_start">2017-09-09 03:00:00</var>
+							<var class="atc_date_end">2017-09-10 00:00:00</var>
+							<var class="atc_timezone">America/Halifax</var>
+							<var class="atc_title">Wedding Ceremony &amp; Reception</var>
+							<var class="atc_description">Please see website for details &amp; itinerary</var>
+							<var class="atc_location">Oceanstone Seaside Resort</var>
+							<var class="atc_organizer">The Sobeys</var>
+							<var class="atc_organizer_email">tabitha.m.wells@gmail.com</var>
+						</var>
+   		 			</span>
 				</div>
 			</div>
 		</div>
@@ -120,7 +162,7 @@
 <!-- END RESORT SECTION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	
 <!-- START FYI SECTION /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-	<section class="fyi-bg text-center scrolling" id="fyi">
+	<section class="fyi-bg scrolling" id="fyi">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="fyi-wrap">
@@ -393,6 +435,9 @@
 					  		<h3>The Proposal - pt.4</h3>
 					  		They popped a bottle of champagne and went to dinner at Story's.  After dinner they face timed friends and family back at the hotel and then celebrated together out in Halifax until 4am.
 					  	</div>
+					  	<div class="slider-wrap" id="slider-7">
+					  		<img src="img/gallery/engagement.jpg" alt="engagement ring">
+					  	</div>
 					</div>
 				</div>
 			</div>
@@ -406,49 +451,160 @@
 			<div class="row">
 				<!-- Swiper -->
 				<div class="swiper-container">
+					<h1>Moments</h1>
 					<div class="swiper-wrapper">
-						<div class="swiper-slide"><img src="img/gallery/firstyeardate2007.jpg" alt="first year dating">First year dating, 2007</div>
-						<div class="swiper-slide"><img src="img/gallery/firsttripmexico2008.JPG" alt="first trip together">First trip, Mexico 08'</div>
-						<div class="swiper-slide"><img src="img/gallery/mayanruins2011.JPG" alt="mayan ruins">Mayan ruins, 2011</div>
-						<div class="swiper-slide"><img src="img/gallery/lombardstsanfran.jpg" alt="lombard street san fran">Lombard st. San Fran</div>
-						<div class="swiper-slide"><img src="img/gallery/annualkenjithanksgiv.jpg" alt="annual keji thanksgiving">Annual Keji Thanksgiving</div>
-						<div class="swiper-slide"><img src="img/gallery/bellagiovegas.jpg" alt="bellagio las vegas">Bellagio, Vegas</div>
-						<div class="swiper-slide"><img src="img/gallery/brunelloestatesgolf.jpg" alt="brunello estates golfing">Brunello Estates, golfing</div>
-						<div class="swiper-slide"><img src="img/gallery/candlestickparksanfran.jpg" alt="candlestick park san fran">Candlestick Park, San Fran</div>
-						<div class="swiper-slide"><img src="img/gallery/crabbemountain.jpg" alt="crabbe mtn skiing">Crabbe mtn, skiing</div>
-						<div class="swiper-slide"><img src="img/gallery/dirtynellys.jpg" alt="dirty nellys halifax">Dirty Nellys, Halifax</div>
-						<div class="swiper-slide"><img src="img/gallery/fenwaypark.jpg" alt="fenway park">Fenway Park</div>
-						<div class="swiper-slide"><img src="img/gallery/goldengatesanfran.jpg" alt="golden gate bridge">Golden Gate Bridge</div>
-						<div class="swiper-slide"><img src="img/gallery/grandcanyonarizona.jpg" alt="grand canyon arizona">Grand Canyon, Arizona</div>
-						<div class="swiper-slide"><img src="img/gallery/helicoptervegasstrip.jpg" alt="helicopter vegas strip">Helicopter over Vegas strip</div>
-						<div class="swiper-slide"><img src="img/gallery/mugs.jpg" alt="mean muggin">Mean muggin'</div>
-						<div class="swiper-slide"><img src="img/gallery/newyearseve.jpg" alt="new years eve">New Years Eve</div>
-						<div class="swiper-slide"><img src="img/gallery/ottawa.jpg" alt="ottawa">Ottawa</div>
-						<div class="swiper-slide"><img src="img/gallery/signalhill.jpg" alt="signal hill newfoundland">Signal Hill, Newfoundland</div>
-						<div class="swiper-slide"><img src="img/gallery/stmartinport.jpg" alt="st maarten port">St. Maarten Port</div>
-						<div class="swiper-slide"><img src="img/gallery/turksncaicos.jpg" alt="turks and caicos">Turks and Caicos</div>
-						<div class="swiper-slide"><img src="img/gallery/ziplinepuertorico.jpg" alt="ziplining puerto rico">Ziplining, Puerto Rico</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/firstyeardate2007.jpg" alt="first year dating">
+							<div class="swiper-text">First year dating, 2007</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/firsttripmexico2008.JPG" alt="first trip together">
+							<div class="swiper-text">First trip, Mexico 08'</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/mayanruins2011.JPG" alt="mayan ruins">
+							<div class="swiper-text">Mayan ruins, 2011</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/lombardstsanfran.jpg" alt="lombard street san fran">
+							<div class="swiper-text">Lombard st. San Fran</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/annualkenjithanksgiv.jpg" alt="annual keji thanksgiving">
+							<div class="swiper-text">Annual Keji Thanksgiving</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/bellagiovegas.jpg" alt="bellagio las vegas">
+							<div class="swiper-text">Bellagio, Vegas</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/brunelloestatesgolf.jpg" alt="brunello estates golfing">
+							<div class="swiper-text">Brunello Estates, golfing</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/candlestickparksanfran.jpg" alt="candlestick park san fran">
+							<div class="swiper-text">Candlestick Park, San Fran</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/crabbemountain.jpg" alt="crabbe mtn skiing">
+							<div class="swiper-text">Crabbe mtn, skiing</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/dirtynellys.jpg" alt="dirty nellys halifax">
+							<div class="swiper-text">Dirty Nellys, Halifax</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/fenwaypark.jpg" alt="fenway park">
+							<div class="swiper-text">Fenway Park</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/goldengatesanfran.jpg" alt="golden gate bridge">
+							<div class="swiper-text">Golden Gate Bridge</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/grandcanyonarizona.jpg" alt="grand canyon arizona">
+							<div class="swiper-text">Grand Canyon, Arizona</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/helicoptervegasstrip.jpg" alt="helicopter vegas strip">
+							<div class="swiper-text">Helicopter over Vegas strip</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/mugs.jpg" alt="mean muggin">
+							<div class="swiper-text">Mean muggin'</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/newyearseve.jpg" alt="new years eve">
+							<div class="swiper-text">New Years Eve</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/ottawa.jpg" alt="ottawa">
+							<div class="swiper-text">Ottawa</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/signalhill.jpg" alt="signal hill newfoundland">
+							<div class="swiper-text">Signal Hill, Newfoundland</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/stmartinport.jpg" alt="st maarten port">
+							<div class="swiper-text">St. Maarten Port</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/turksncaicos.jpg" alt="turks and caicos">
+							<div class="swiper-text">Turks and Caicos</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gallery/ziplinepuertorico.jpg" alt="ziplining puerto rico">
+							<div class="swiper-text">Ziplining, Puerto Rico</div>
+						</div>
 					</div>
 					<!-- Add Arrows -->
 					<div class="swiper-button-next"></div>
 					<div class="swiper-button-prev"></div>
+				</div>
+				<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 insta-wrap">
+					<h2>Social Media Much?</h2>
+					<hr>
+                 	<div class="row">
+                 		<div class="col-xs-12 col-md-6">
+							<h3 class="tweet-text">#keepingtabsonsean tweets</h3>
+							<p class="tweet-text">Click the twitter icon below to tweet about how awesome this wedding is. Make sure to use the wedding hashtag!</p>
+							<ul class="social-link">
+								<li class="twitter"><a class="social-link" href="http://twitter.com/home?status=%23keepingtabsonsean" title="The Sobey Wedding" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<a class="twitter-timeline"  href="https://twitter.com/hashtag/keepingtabsonsean" data-widget-id="806701425468313600">#keepingtabsonsean Tweets</a>
+            				<script>
+								!function(d,s,id){
+									var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){
+										js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);
+									}
+								}(document,"script","twitter-wjs");
+							</script>
+						</div>
+					</div>
+                  	<hr class="insta-sm">	
+                  	<div class="row">
+                  		<div class="col-xs-12 col-md-6 insta-sm">
+							<h3 class="insta-text">#keepingtabsonsean Instagram tags</h3>
+							<p class="insta-text">Click the instagram icon below to see all of the pictures snapped at the wedding, using the wedding hashtag!</p>
+							<ul class="social-link">
+								<li class="instagram"><a href="https://www.instagram.com/tabithamwells/"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<!-- Instagram SnapWidget -->
+							<script src="https://snapwidget.com/js/snapwidget.js"></script>
+							<iframe src="https://snapwidget.com/embed/299382" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+						</div>
+                  		<div class="col-xs-12 col-md-6 insta-lg">
+							<h3 class="insta-text">#keepingtabsonsean Instagram tags</h3>
+							<p class="insta-text">Click the instagram icon below to see all of the pictures snapped at the wedding, using the wedding hashtag!</p>
+							<ul class="social-link">
+								<li class="instagram"><a href="https://www.instagram.com/tabithamwells/"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 <!-- END GALLERY SECTION ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-<!-- START INSTAGRAM SECTION ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-	<section class="instagram-bg text-center scrolling" id="instagram">
+<!-- START REGISTRY SECTION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<section class="registry-bg text-center scrolling" id="registry">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-xs-4">
-					
-				</div>
+				<ul>
+					<h1>REGISTRY COMING SOON...</h1>
+					<li><a href="#"><img src="" alt=""></a></li>
+					<li><a href="#"><img src="" alt=""></a></li>
+				</ul>
 			</div>
 		</div>
 	</section>
-<!-- END INSTAGRAM SECTION /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- END REGISTRY SECTION //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <!-- START FOOTER SECTION //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	<footer class="footer-bg text-center scrolling" id="footer">
@@ -594,8 +750,8 @@
 			spaceBetween: 30,
 			// Responsive breakpoints
   			breakpoints: {
-    			// when window width is <= 770px
-    			770: {
+    			// when window width is <= 990px
+    			990: {
       			slidesPerView: 1,
       			spaceBetween: 0
     			},
