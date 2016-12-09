@@ -29,3 +29,12 @@ ul.navbar-nav{
 .insta-wrap{
 	height:1200px;
 }
+.hero-bg{
+	background-attachment:scroll;
+}
+.resort-bg{
+	background-attachment:scroll;
+}
+.story-bg{
+	background-attachment:scroll;
+}
