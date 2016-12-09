@@ -1,12 +1,30 @@
+/* Responsive for screen 766px to 945px */
+
 .navbar-default .navbar-brand{
-	font-size:3.5em;
-	line-height:60px;
+	font-size:2em;
+	line-height:20px;
+}
+.navbar>.container-fluid .navbar-brand{
+	margin:0 39.7%;
 }
 .navbar-default .navbar-nav li a{
 	font-size:1.5em;
+	line-height:normal;
+}
+.navbar-nav>li>a{
+	padding-top:8px;
+}
+ul.navbar-nav{
+	margin:0 4.1%;
+}
+.fyi-wrap h1{
+	text-align:center;
+}
+.info-text{
+	display:block;
 }
 .gallery-bg{
-	padding-bottom:1200px;
+	padding-bottom:1300px;
 }
 .insta-wrap{
 	height:1200px;

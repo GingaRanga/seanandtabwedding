@@ -38,11 +38,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css" integrity="sha256-qmCTrpLvkz/GexFbP14i9p8vymHbYOEQEZflvEKaXHU=" crossorigin="anonymous" />
 	<!-- MAIN CSS -->
 	<link href="css/lg.css" rel="stylesheet">
-	<link href="css/xs.css" rel="stylesheet" media="screen and (max-width:770px)">
-	
+	<link href="css/xs.css" rel="stylesheet" media="screen and (max-width:765px)">
+	<link href="css/sm.css" rel="stylesheet" media="screen and (max-width: 945px) and (min-width: 766px)">
+	<link href="css/md.css" rel="stylesheet" media="screen and (max-width: 1145px) and (min-width: 946px)">
 	<!--
-	<link href="css/sm.css" rel="stylesheet" media="screen and (max-width: 1150px) and (min-width: 915px)">
-	<link href="css/md.css" rel="stylesheet" media="screen and (max-width: 1205px) and (min-width: 996px)">
 	<link href="css/max666landscape.css" rel="stylesheet" media="screen and (orientation:landscape)">
 	-->
 
@@ -613,7 +612,7 @@
 				<div class="col-xs-12">
 					This website was designed with <span>love</span>&#44; by <span><a class="link" href="#">Evan Marshall</a></span>. The handsome ginger in the wedding party...
 				</div>
-				<div class="">
+				<div class="to-top">
 					<a class="navbar navbar-default navbar-fixed-bottom top col-xs-2 col-xs-offset-10" href="#page-top">Back to Top</a>
 				</div>
 			</div>
