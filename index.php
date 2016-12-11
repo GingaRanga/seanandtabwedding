@@ -434,9 +434,11 @@
 					  		<h3>The Proposal - pt.4</h3>
 					  		They popped a bottle of champagne and went to dinner at Story's.  After dinner they face timed friends and family back at the hotel and then celebrated together out in Halifax until 4am.
 					  	</div>
+					  	<!--
 					  	<div class="slider-wrap" id="slider-7">
 					  		<img src="img/gallery/engagement.jpg" alt="engagement ring">
 					  	</div>
+					  	-->
 					</div>
 				</div>
 			</div>
@@ -549,7 +551,7 @@
 							<h3 class="tweet-text">#keepingtabsonsean tweets</h3>
 							<p class="tweet-text">Click the twitter icon below to tweet about how awesome this wedding is. Make sure to use the wedding hashtag!</p>
 							<ul class="social-link">
-								<li class="twitter"><a class="social-link" href="http://twitter.com/home?status=%23keepingtabsonsean" title="The Sobey Wedding" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+								<li class="twitter"><a class="social-link" href="http://twitter.com/home?status=%23keepingtabsonsean%20http%3A%2F%2Fwww%2Esoontobesobey%2Ecom" title="The Sobey Wedding" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
 						<div class="col-xs-12 col-md-6">
