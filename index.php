@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Microdata markup added by Google Structured Data Markup Helper. -->
 <html>
 <!-- START HEAD SECTION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --><head>
 	<meta charset="utf-8">
@@ -71,11 +72,11 @@
     </script>
 
 <!-- START HERO SECTION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-	<header class="hero-bg text-center">
+	<span itemscope itemtype="http://schema.org/Event"><header class="hero-bg text-center">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<h1 class="hero-text">Sean &amp; Tabitha</h1>
+					<h1 itemprop="name" class="hero-text">Sean &amp; Tabitha</h1>
 					<a class="hero-btn" href="#"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">RSVP</button></a>
 				</div>
 			</div>
@@ -98,13 +99,13 @@
         		<a class="navbar-brand page-scroll" href="#page-top">Sean &amp; Tabitha</a>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
-					<li><a class="page-scroll" href="#countdown">Tick Tock</a></li>
-					<li><a class="page-scroll" href="#resort">Venue</a></li>
-					<li><a class="page-scroll" href="#fyi">FYI</a></li>
-					<li><a class="page-scroll" href="#portfolio">The Squad</a></li>
-					<li><a class="page-scroll" href="#story">Our Story</a></li>
-					<li><a class="page-scroll" href="#gallery">Moments</a></li>
-					<li><a class="page-scroll" href="#registry">Spoil Us</a></li>
+					<li><a id="section1" class="page-scroll" href="#countdown">Tick Tock</a></li>
+					<li><a id="section2" class="page-scroll" href="#resort">Venue</a></li>
+					<li><a id="section3" class="page-scroll" href="#fyi">FYI</a></li>
+					<li><a id="section4" class="page-scroll" href="#portfolio">The Squad</a></li>
+					<li><a id="section5" class="page-scroll" href="#story">Our Story</a></li>
+					<li><a id="section6" class="page-scroll" href="#gallery">Moments</a></li>
+					<li><a id="section7" class="page-scroll" href="#registry">Spoil Us</a></li>
 				</ul>
 			</div>
 		</div>
@@ -112,12 +113,14 @@
 <!-- END NAV SECTION ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <!-- START COUNTDOWN SECTION ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<main id="scroll-wrap" class="scrolling">
+	
 	<section class="countdown-bg text-center scrolling" id="countdown">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="clock col-xs-12">
+				<div id="clock" class="clock col-xs-12">
 					<p id="clockdiv">In <span class="days"></span> Days, <span class="hours"></span> Hours, <span class="minutes"></span> Minutes, <span class="seconds"></span> Seconds</p>
-					<p>on September 9<sup>th</sup> 2017</p>
+					<p><meta itemprop="startDate" content="2017-09-09">on September 9<sup>th</sup> 2017</p>
 					<span>Sean Andrew Sobey & Tabitha Michele Wells</span>
 					<p>Will be Husband &amp; Wife!!</p>
 					<span><i class="fa fa-venus-mars fa-2x" aria-hidden="true"></i></span><br>
@@ -142,17 +145,17 @@
 <!-- START RESORT SECTION //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	<section class="resort-bg text-center scrolling" id="resort">
 		<div class="container-fluid">
-			<div class="row">
+			<div itemprop="location" itemscope itemtype="http://schema.org/Place" class="row">
 				<div class="col-xs-12">
-					<h1>Oceanstone</h1>
+					<h1 itemprop="name">Oceanstone</h1>
 				</div>
 				<div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 where-wrap">	
 					<h2>Where?</h2>
-					<p>8650 Peggys Cove Rd,
+					<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">8650 Peggys Cove Rd</span>,
 					<br>
-					Indian Harbour,
+					<span itemprop="addressLocality">Indian Harbour</span>,
 					<br>
-					NS B3Z 3P4</p>
+					<span itemprop="addressRegion">NS</span> <span itemprop="postalCode">B3Z 3P4</span></p>
 					<a class="btn" href="https://goo.gl/maps/L8YktnZ22M42">Google Map Link</a>
 				</div>
 			</div>
@@ -181,7 +184,7 @@
 							<p><span>IMPORTANT:</span> Units will be reserved on a first come first serve basis for booking.. so don't wait too late or you may not get a spot if you want one. Once immediate family accommodations have been assigned, booking will be opened to guests. Room descriptions will be posted on here to make it easy for you to decide which one you may want to stay in as some have kitchenettes, some have water view etc. However- with events happening both Friday and Saturday we require a two night minimum stay.  Booking priority and confirmation will be given to those booking 2 night stays.</p>
 						</div>
 						<div id="fyi-box-5" class="fyi-box">
-							<p><span>Friday Sept 8:</span>  The party before the party! We will be having a BBQ dinner for all guests on the beach, lawn games and bon fires... a more relaxing night to drink, mingle and get ready for the big day! </p>
+							<p><span>Friday Sept 8:</span> The party before the party! We will be having a BBQ dinner for all guests on the beach, lawn games and bon fires... a more relaxing night to drink, mingle and get ready for the big day! </p>
 						</div>
 						<div id="fyi-box-6" class="fyi-box">
 							<p><span>Saturday Sept 9:</span> The real party - The Wedding! Ceremony, Cocktail hour complete with hors d'ouvres and then Dinner and Dance at the main lodge. </p>
@@ -455,7 +458,7 @@
 					<h1>Moments</h1>
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<img src="img/gallery/firstyeardate2007.jpg" alt="first year dating">
+							<img itemprop="image" src="img/gallery/firstyeardate2007.jpg" alt="first year dating">
 							<div class="swiper-text">First year dating, 2007</div>
 						</div>
 						<div class="swiper-slide">
@@ -544,17 +547,17 @@
 					<div class="swiper-button-prev"></div>
 				</div>
 				<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 insta-wrap">
-					<h2>Social Media Much?</h2>
+					<h2 id="social-header">Social Media Much?</h2>
 					<hr>
                  	<div class="row">
-                 		<div class="col-xs-12 col-md-6">
+                 		<div id="twitter-link" class="col-xs-12 col-md-6">
 							<h3 class="tweet-text">#keepingtabsonsean tweets</h3>
 							<p class="tweet-text">Click the twitter icon below to tweet about how awesome this wedding is. Make sure to use the wedding hashtag!</p>
 							<ul class="social-link">
 								<li class="twitter"><a class="social-link" href="http://twitter.com/home?status=%23keepingtabsonsean%20http%3A%2F%2Fwww%2Esoontobesobey%2Ecom" title="The Sobey Wedding" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
-						<div class="col-xs-12 col-md-6">
+						<div id="twitter-widget" class="col-xs-12 col-md-6">
 							<a class="twitter-timeline"  href="https://twitter.com/hashtag/keepingtabsonsean" data-widget-id="806701425468313600">#keepingtabsonsean Tweets</a>
             				<script>
 								!function(d,s,id){
@@ -574,12 +577,12 @@
 								<li class="instagram"><a href="https://www.instagram.com/tabithamwells/"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
-						<div class="col-xs-12 col-md-6">
+						<div id="insta-widget" class="col-xs-12 col-md-6">
 							<!-- Instagram SnapWidget -->
 							<script src="https://snapwidget.com/js/snapwidget.js"></script>
 							<iframe src="https://snapwidget.com/embed/299382" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
 						</div>
-                  		<div class="col-xs-12 col-md-6 insta-lg">
+                  		<div id="insta-link" class="col-xs-12 col-md-6 insta-lg">
 							<h3 class="insta-text">#keepingtabsonsean Instagram tags</h3>
 							<p class="insta-text">Click the instagram icon below to see all of the pictures snapped at the wedding, using the wedding hashtag!</p>
 							<ul class="social-link">
@@ -590,7 +593,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section></span>
 <!-- END GALLERY SECTION ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <!-- START REGISTRY SECTION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -620,6 +623,8 @@
 			</div>
 		</div>
 	</footer>
+	
+	</main><!-- ./main-wrap -->
 <!-- END FOOTER SECTION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <!-- START RSVP FORM & PHP /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -732,8 +737,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<!-- BOOTSTRAP JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
-	<!-- GSAP JS -->
+	<!-- SCROLLMAGIC AND GSAP JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js" integrity="sha256-NsDsBdeb2dMWTv/D7KDxlizW+Cux9ByyEuCAkQviQVM=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js" integrity="sha256-+bwq8Vn1b2Nz1mF35GyYCR3WP1zNBq6AX9P+rIR/vg8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js" integrity="sha256-/6NS53KuMVgzxQozkNjhDjwcyDmv8Sk52zodr91uoo4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js" integrity="sha256-h8XvjWyCJSpIWTvjHOnvHOoYiYNnSzc2DQb6WZCsDb4=" crossorigin="anonymous"></script>
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
 	<!-- SLICK CAROUSEL JS -->
