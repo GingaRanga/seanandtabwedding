@@ -1,4 +1,88 @@
-<!doctype html>
+<?php
+
+	include('php/connection.php');
+
+	if( isset( $_POST["post_submit"] ) ){
+		
+		//fxn which validates the data
+		function validateFormData( $formData ){
+			
+			$formData = trim( stripslashes( htmlspecialchars( $formData ) ) );
+			return $formData;
+			
+		}
+		
+		//check to see if inputs are empty
+		//create variables with form data
+		//wrap data with our fxn
+		
+		$rsvp = $attend = $name = $email = $guest = $extras = "";
+		
+		if( !$_POST["formrsvp"] ){
+			$formrsvpErr = "Please select yes or no <br>";
+		}else{
+			$rsvp = validateFormData( $_POST["formrsvp"] );
+		}
+		
+		if( !$_POST["formattend"] ){
+			$formattendErr = "Please select yes or no <br>";
+		}else{
+			$attend = validateFormData( $_POST["formattend"] );
+		}
+		
+		if( !$_POST["formfullname"] ){
+			$formnameErr = "Please enter your full name <br>";
+		}else{
+			$name = validateFormData( $_POST["formfullname"] );
+		}
+		
+		if( !$_POST["formemail"] ){
+			$formemailErr = "Please enter your email address <br>";
+		}else{
+			$email = validateFormData( $_POST["formemail"] );
+		}
+		
+		if( !$_POST["formguestnames"] ){
+			$formguestErr = "Please enter the name of all guests in your party as per invitation <br>";
+		}else{
+			$guest = validateFormData( $_POST["formguestnames"] );
+		}
+		
+		if( !$_POST["formextras"] ){
+			$formextrasErr = "Please specify if you have any specific requests or not <br>";
+		}else{
+			$extras = validateFormData( $_POST["formextras"] );
+		}
+		
+		//check if any of the above fields are empty, then insert query
+		if( $rsvp && $attend && $name && $email && $guest ){
+			
+			//when above verified enter data into database
+			$query = "INSERT INTO users (id, formrsvp, formattend, formfullname, formemail, formguestnames, formextras, submit_date) VALUES (NULL, '$rsvp', '$attend', '$name', '$email', '$guest', '$extras', CURRENT_TIMESTAMP)";
+
+			//errors and message output
+			if( mysqli_query( $conn, $query ) ){
+				
+				echo 	"<div style='margin:0;font-size:2em;' class='text-center alert alert-warning alert-dismissible fade in' role='alert'>
+							<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+								<span style='font-size:2em;' aria-hidden='true'>x</span>
+							</button>
+							Thank you for your RSVP. We look forward to breaking it down with you on the dance floor!
+						</div>";
+			
+			}else{
+				echo "Error: ". $query . "<br>" . mysqli_error($conn);
+			}
+			
+		}
+		
+	}
+
+	mysqli_close($conn);
+
+?>
+
+<!DOCTYPE html>
 <!-- Microdata markup added by Google Structured Data Markup Helper. -->
 <html>
 <!-- START HEAD SECTION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --><head>
@@ -105,7 +189,7 @@
 					<li><a id="section4" class="page-scroll" href="#portfolio">The Squad</a></li>
 					<li><a id="section5" class="page-scroll" href="#story">Our Story</a></li>
 					<li><a id="section6" class="page-scroll" href="#gallery">Moments</a></li>
-					<li><a id="section7" class="page-scroll" href="#registry">Spoil Us</a></li>
+					<li><a id="section7" class="page-scroll" href="#registry">Registry</a></li>
 				</ul>
 			</div>
 		</div>
@@ -119,9 +203,58 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div id="clock" class="clock col-xs-12">
-					<p id="clockdiv">In <span class="days"></span> Days, <span class="hours"></span> Hours, <span class="minutes"></span> Minutes, <span class="seconds"></span> Seconds</p>
+					<p id="clockdiv">In <span class="days"></span> Days, <span class="hours"></span> Hours, <span class="minutes"></span> Minutes, and <span class="seconds"></span> Seconds;</p>
+					
+					<script>
+						function getTimeRemaining(endtime) {
+						  "use strict";	
+						  var t = Date.parse(endtime) - Date.parse(new Date());
+						  var seconds = Math.floor((t / 1000) % 60);
+						  var minutes = Math.floor((t / 1000 / 60) % 60);
+						  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+						  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+						  return {
+							'total': t,
+							'days': days,
+							'hours': hours,
+							'minutes': minutes,
+							'seconds': seconds
+						  };
+						}
+
+						function initializeClock(id, endtime, message) {
+						  "use strict";	
+						  var clock = document.getElementById(id);
+						  var daysSpan = clock.querySelector('.days');
+						  var hoursSpan = clock.querySelector('.hours');
+						  var minutesSpan = clock.querySelector('.minutes');
+						  var secondsSpan = clock.querySelector('.seconds');
+
+						  function updateClock() {
+							var t = getTimeRemaining(endtime);
+
+							daysSpan.innerHTML = t.days;
+							hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+							minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+							secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+							if (t.total <= 0) {
+							  clearInterval(timeinterval);
+									document.getElementById(id).innerHTML = message;
+							}
+						  }
+
+						  updateClock();
+						  var timeinterval = setInterval(updateClock, 1000);
+						}
+
+						var deadline = 'September 09 2017 16:00:00 GMT-0300';
+
+						initializeClock('clockdiv', deadline, '<div style="background:#33B89B;color:#fff;" class="alert alert-dismissible fade in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span style="color:#000;" aria-hidden="true">×</span></button><h4 style="font-size:2em;margin-bottom:0;">Congratulations Mr. and Mrs. Sobey!</h4></div>');
+					</script>
+					
 					<p><meta itemprop="startDate" content="2017-09-09">on September 9<sup>th</sup> 2017</p>
-					<span>Sean Andrew Sobey & Tabitha Michele Wells</span>
+					<span>Sean Andrew Sobey &amp; Tabitha Michele Wells</span>
 					<p>Will be Husband &amp; Wife!!</p>
 					<span><i class="fa fa-venus-mars fa-2x" aria-hidden="true"></i></span><br>
 					<span class="addtocalendar atc-style-blue">
@@ -173,15 +306,22 @@
 						<div id="fyi-box-1" class="fyi-box">
 							<p>Please come celebrate a weekend away with us! Enjoy a mini getaway at one of Nova Scotia's most beautiful hidden gems! An <span>adult only</span> weekend please! </p>
 						</div>
-						<div id="fyi-box-2" class="fyi-box">
-							<p>We invite you to celebrate with us both Friday and Saturday night.</p>
-						</div>
 						<div id="fyi-box-3" class="fyi-box">
-							<p><span>Accommodations:</span>
-							Please note that Oceanstone has 25 units for accommodations. A unit could be a cottage, an inn room, suite or a simple hotel-like room. Some units sleep more than 2 people so bunk up with friends and family if you would like to save on cost and this also ensures as many people can stay on the property as possible! </p>
+							<p><span>Accommodations Update:</span>
+							We still have a few rooms left if you would like to spend the weekend with us at Oceanstone! </p>
 						</div>
 						<div id="fyi-box-4" class="fyi-box">
-							<p><span>IMPORTANT:</span> Units will be reserved on a first come first serve basis for booking.. so don't wait too late or you may not get a spot if you want one. Once immediate family accommodations have been assigned, booking will be opened to guests. Room descriptions will be posted on here to make it easy for you to decide which one you may want to stay in as some have kitchenettes, some have water view etc. However- with events happening both Friday and Saturday we require a two night minimum stay.  Booking priority and confirmation will be given to those booking 2 night stays.</p>
+							<p><span>IMPORTANT:</span> If you HAVE spoken to the bride and groom directly and have expressed interest in staying on site, they have reserved a room for you.</p>
+
+							<p>Please call to secure your room with a 25% deposit ASAP.</p>
+
+							<p>If you do not call to confirm your room, and the bride and groom receive interest from other guests that do not yet have a room, you could risk losing your spot. Please mention the last names of yourself or someone in your room as Oceanstone has a list of pre assigned rooms.</p>
+
+							<p>If you HAVE NOT spoken to the bride and groom directly about accommodations and would like to spend the weekend with us, please call Oceanstone ASAP and they will let you know the availability of rooms and assist you to book.</p>
+
+							<p>Reminder: 2 night requirement stay.</p>
+
+							<p>We hope to spend the weekend with all of you!</p>
 						</div>
 						<div id="fyi-box-5" class="fyi-box">
 							<p><span>Friday Sept 8:</span> The party before the party! We will be having a BBQ dinner for all guests on the beach, lawn games and bon fires... a more relaxing night to drink, mingle and get ready for the big day! </p>
@@ -189,9 +329,7 @@
 						<div id="fyi-box-6" class="fyi-box">
 							<p><span>Saturday Sept 9:</span> The real party - The Wedding! Ceremony, Cocktail hour complete with hors d'ouvres and then Dinner and Dance at the main lodge. </p>
 						</div>
-						<div id="fyi-box-7" class="fyi-box">
-							<p>P.S Looking for something to do Saturday before the wedding? Relax and enjoy the Oceanstone property or take a visit to the beautiful Peggy's Cove, as its only 5 minutes away!</p>
-						</div>
+						
 					</div>
 					<div class="col-md-6 col-xs-12 fyi-promo">
 						<div class="embed-responsive embed-responsive-16by9">
@@ -293,7 +431,7 @@
 									<h4>Bridesmaid</h4>
 								</div><!-- ./project-category -->
 								<div class="project-name">
-									Tab and Jenn met in Grade 10 when they were both working at The Chickenburger in Bedford. They clicked immediately and became best friends. Their friendship can best be described as "easy" and "natural." They applied to Nursing School together and spent every moment of the 4 years either as study buddies or party animals. After nursing school Jenn moved to Ontario and they kept in touch as much as possible. In 2016 she Jenn returned home. They picked up right where they left off and have since been planning their weddings together!
+									Tab and Jenn met in Grade 10 when they were both working at The Chickenburger in Bedford. They clicked immediately and became best friends. Their friendship can best be described as "easy" and "natural." They applied to Nursing School together and spent every moment of the 4 years either as study buddies or party animals. After nursing school Jenn moved to Ontario and they kept in touch as much as possible. In 2016 she then returned home. They picked up right where they left off and have since been planning their weddings together!
 								</div>
 							</div>
 						</div>
@@ -600,11 +738,12 @@
 	<section class="registry-bg text-center scrolling" id="registry">
 		<div class="container-fluid">
 			<div class="row">
-				<ul>
-					<h1>REGISTRY COMING SOON...</h1>
-					<li><a href="#"><img src="" alt=""></a></li>
-					<li><a href="#"><img src="" alt=""></a></li>
-				</ul>
+				<div class="col-sm-8 col-sm-offset-2 text-center" id="registry-text">
+					<h1>REGISTRY</h1>
+					<a href="https://www.bedbathandbeyond.ca/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&inventoryCallEnabled=true&registryId=544337792&pwsurl="><img class="img-responsive registry-link center-block" src="img/bbb.png" width="50%" alt="bed bath and beyond logo"></a>
+					<p class="lead">Tabitha and Sean are registered at Bed Bath and Beyond! Their registry number is <a href="https://www.bedbathandbeyond.ca/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&inventoryCallEnabled=true&registryId=544337792&pwsurl=" class="registry-link">544337792</a>, or if you need to search by name: Tabitha Wells or Sean Sobey.</p>
+					<p class="lead">If you would like to give them a gift for the wedding besides what they have requested on their registry, they would appreciate money to add to their future home fund. Thank you&#33;</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -628,6 +767,7 @@
 <!-- END FOOTER SECTION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <!-- START RSVP FORM & PHP /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
 	<!-- Modal -->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
@@ -635,102 +775,56 @@
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<h1 class="modal-title" id="myModalLabel">RSVP</h1>
-				</div>
+				</div><!-- /.modal-header -->
 				<div class="modal-body">
-					<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+				
+				
+					<form method="post" action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>">
 						<div class="radio">
 							<label><h2>Attending Wedding?</h2><br>
 								<input  type="radio" name="formrsvp" value="Yes" aria-label="..." checked>Yes, because I'm awesome! <br>
 								<input  type="radio" name="formrsvp" value="No" aria-label="...">No, because I wish I was cooler... <br>
 							</label>
-						</div>
+						</div><!-- /.radio -->
 						<hr>
 						<div class="radio">
 							<label><h2>Are you Attending Friday?</h2><br>
 								<input type="radio" value="Yes" name="formattend" aria-label="..." checked>You know it! I will be at the Rehersal Dinner &amp; Beach Party <br>
 								<input type="radio" value="No" name="formattend" aria-label="...">Pssh nah! I won't be at the Rehersal Dinner &amp; Beach Party <br>
 							</label>
-						</div>
+						</div><!-- /.radio -->
 						<hr>
 						<div class="form-group">
-							<label for="formfullname"><h2>What Ya Moma Call Yah?</h2></label>
+							<label for="formfullname"><h2>Your Full Name</h2></label>
 							<input required type="name" name="formfullname" class="form-control" placeholder="Please enter your full name">
-						</div>
+						</div><!-- /.form-group -->
 						<div class="form-group">
-							<label for="formemail"><h2>Snail Mail:</h2></label>
+							<label for="formemail"><h2>Your Email</h2></label>
 							<input required type="email" name="formemail" class="form-control" placeholder="Please enter your email address">
-						</div>
+						</div><!-- /.form-group -->
 						<hr>
 						<div class="textarea">
 							<label><h2>Guest Names:</h2></label>
-							  <textarea name="formguestnames" class="form-control" rows="6" placeholder="Please enter the full name of all guests in your party, as addressed on your invitation..."></textarea>
-						</div>
+							  <textarea required name="formguestnames" class="form-control" rows="6" placeholder="Please enter the full name of all guests in your party, as addressed on your invitation..."></textarea>
+						</div><!-- /.textarea -->
 						<hr>
-						<span>**Meal to be served at wedding will be NUGGIES!!</span>
+						<span>**Meal to be served at wedding will be Beef Tenderloin.</span>
 						<hr>
 						<div class="textarea">
 							<label><h2>You Picky or What?</h2></label>
 							  <textarea name="formextras" class="form-control" rows="10" placeholder="Please enter any specific information for the bride and groom, such as vegetarian guests, allergies, etc. If info is specific to a guest, please enter their name as well as info..."></textarea>
-						</div>
+						</div><!-- /.textarea -->
 						<br>
-						<button type="submit" value="Submit" name="submit" class="btn btn-primary">Submit</button>
+						<button type="submit" value="Submit" name="post_submit" class="btn btn-primary">Submit</button>
 						<button type="button" value="Close" name="close" class="btn btn-default" data-dismiss="modal">Close</button>
 					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+					
+					
+				</div><!-- /.modal-body -->
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- ./modal -->
 
-	<?php
-
-		$servername = "rsvp.db";
-		$username = "gingaranga";
-		$password = "Ch33K02?";
-		$dbname = "rsvp";
-
-		// Create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
-
-		// Check connection
-		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-		}
-
-		function test_input($data) {
-				$data = trim($data);
-				$data = stripslashes($data);
-				$data = htmlspecialchars($data);
-				return $data;
-		}
-
-		if(isset($_POST["submit"])){
-
-			$serverrsvp = test_input($_POST["formrsvp"]);
-			$serverattend = test_input($_POST["formattend"]);
-			$serverfullname = test_input($_POST["formfullname"]);
-			$serveremail = test_input($_POST["formemail"]);
-			$serverguestnames = test_input($_POST["formguestnames"]);
-			$serverextras = test_input($_POST["formextras"]);
-
-			$serverrsvp = mysqli_real_escape_string($conn, $serverrsvp);
-			$serverattend = mysqli_real_escape_string($conn, $serverattend);
-			$serverfullname = mysqli_real_escape_string($conn, $serverfullname);
-			$serveremail = mysqli_real_escape_string($conn, $serveremail);
-			$serverguestnames = mysqli_real_escape_string($conn, $serverguestnames);
-			$serverextras = mysqli_real_escape_string($conn, $serverextras);
-
-			$sql = "INSERT INTO rsvp (dbrsvp, dbattend, dbfullname, dbemail, dbguestnames, dbextras, rsvpdate)
-			VALUES ('$serverrsvp', '$serverattend', '$serverfullname', '$serveremail', '$serverguestnames', '$serverextras',NOW())";
-
-			if ($conn->query($sql) === TRUE) {
-				echo "<script type= 'text/javascript'>alert('Looking forward to seeing ya break it down on the dance floor!');</script>";
-			} else {
-				echo "<script type= 'text/javascript'>alert('Error: " . $sql . "<br>" . $conn->error."');</script>";
-			}
-
-			$conn->close();
-		}
-	?>
 <!-- END RSVP FORM & PHP ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	
 	<!-- JQUERY -->
@@ -742,6 +836,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js" integrity="sha256-+bwq8Vn1b2Nz1mF35GyYCR3WP1zNBq6AX9P+rIR/vg8=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js" integrity="sha256-/6NS53KuMVgzxQozkNjhDjwcyDmv8Sk52zodr91uoo4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js" integrity="sha256-h8XvjWyCJSpIWTvjHOnvHOoYiYNnSzc2DQb6WZCsDb4=" crossorigin="anonymous"></script>
+	<!-- JQUERY EASING -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha256-rD86dXv7/J2SvI9ebmNi5dSuQdvzzrrN2puPca/ILls=" crossorigin="anonymous"></script>
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
 	<!-- SLICK CAROUSEL JS -->
@@ -767,6 +863,36 @@
 			}
     	});
     </script>
+    
+    <!-- Collapse Nav and easing JS -->
+    <script>
+		(function($) {
+			"use strict"; // Start of use strict
+
+			// jQuery for page scrolling feature - requires jQuery Easing plugin
+			$('a.page-scroll').bind('click', function(event) {
+				var $anchor = $(this);
+				$('html, body').stop().animate({
+					scrollTop: ($($anchor.attr('href')).offset().top - 50)
+				}, 1250, 'easeInOutExpo');
+				event.preventDefault();
+			});
+
+			// Closes the Responsive Menu on Menu Item Click
+			$('.navbar-collapse ul li a').click(function() {
+				$('.navbar-toggle:visible').click();
+			});
+
+			// Fit Text Plugin for Main Header
+			$("h1").fitText(
+				1.2, {
+					minFontSize: '35px',
+					maxFontSize: '65px'
+				}
+			);
+
+		})(jQuery); // End of use strict
+	</script>
 
 </body>
 <!-- END BODY SECTION //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->

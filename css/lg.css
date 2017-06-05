@@ -252,7 +252,7 @@ main{
 }
 .embed-responsive{
 	margin:0;
-	padding:315px 0;
+	padding:298px 0;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -577,7 +577,7 @@ h3.insta-text{
 	background: #c13584;
 }
 
-/* INSTAGRAM CSS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* REGISTRY CSS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .registry-bg{
 	background-color:#C1B3C4;
@@ -599,6 +599,38 @@ h3.insta-text{
 .registry-bg ul a{
 	display:inline-block;
 	margin:0 20px;
+}
+#registry-text p.lead{
+	margin: 10px 20px 0;
+	color: #fff;
+	line-height: 1;
+}
+#registry-text h1{
+	font-size: 4.5em;
+	color: #fff;
+}
+.registry-link {
+	text-transform:uppercase;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-webkit-transition:all 0.5s;
+	color: #000;
+	opacity: 0.3;
+}
+.registry-link:hover, .registry-link:focus {
+	opacity: 1;
+	text-decoration: none;
+	cursor: pointer;
+	color:#ffffff;
+	text-shadow: 2px 2px 2px #000000;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s; 
 }
 
 /* FOOTER CSS ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */

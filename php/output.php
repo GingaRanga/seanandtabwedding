@@ -1,3 +1,17 @@
+<?php
+
+	include('connection.php');
+
+	// query the database
+	//$query = "SELECT * FROM users";
+	$query = "SELECT id, formrsvp, formattend, formfullname, formemail, formguestnames, formextras, DATE_FORMAT(submit_date, '%M %d, %Y') AS sd, id FROM users ORDER BY submit_date ASC";
+	// store query results in result variable
+	$result = mysqli_query($conn, $query);
+
+	$num = mysqli_num_rows($result);
+
+?>
+
 <!doctype html>
 <html>
 <!-- START HEAD SECTION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --><head>
@@ -22,33 +36,14 @@
 	<body>
 	
 		<?php
-
-			$servername = "rsvp.db";
-			$username = "gingaranga";
-			$password = "Ch33K02?";
-			$dbname = "rsvp";
-
-			// Create connection
-			$conn = new mysqli($servername, $username, $password, $dbname);
-
-			// Check connection
-			if ($conn->connect_error) {
-				die("Connection failed: " . $conn->connect_error);
-			}
-		
-			$q = "SELECT id, dbrsvp, dbattend, dbfullname, dbemail, dbguestnames, dbextras, DATE_FORMAT(rsvpdate, '%M %d, %Y') AS dr, id FROM rsvp ORDER BY rsvpdate ASC";
-
-			$r = mysqli_query($conn, $q);
-		
-			$num = mysqli_num_rows($r);
-		
-			if ($num > 0){
+				
+			// check if anything store in table, by checking rows against the result variable when greater than 0
+			if ( $num > 0 ){
 				
 				echo "<h2 class='text-center' style='padding-bottom:20px;color:#C1B3C4;'>There are $num completed RSVPs.</h2>";
 				
 				echo 
-				"<div class='table-responsive'>
-					<table class='table table-hover'>
+					"<table class='table table-bordered table-hover'>
 						<thead>
 							<tr>
 								<th>#</th>
@@ -62,34 +57,33 @@
 							</tr>
 						</thead>";
 
-				while($row = mysqli_fetch_array($r)){
+				while( $row = mysqli_fetch_assoc($result) ){
 
 					echo 
 					"<tbody>
 						<tr>
 							<th scope='row'>".$row['id']."</th>
-							<td>".$row['dbrsvp']."</td>
-							<td>".$row['dbattend']."</td>
-							<td>".$row['dbfullname']."</td>
-							<td>".$row['dbemail']."</td>
-							<td>".$row['dbguestnames']."</td>
-							<td>".$row['dbextras']."</td>
-							<td>".$row['dr']."</td>
+							<td>".$row['formrsvp']."</td>
+							<td>".$row['formattend']."</td>
+							<td>".$row['formfullname']."</td>
+							<td>".$row['formemail']."</td>
+							<td>".$row['formguestnames']."</td>
+							<td>".$row['formextras']."</td>
+							<td>".$row['sd']."</td>
 						</tr>
 					</tbody>";
 
 
-				}
+				}// while
 
 				echo
-					"</table>
-				</div>";
+					"</table>";
 				
 			}else{
 				echo "<h2 class='text-center'>There are currently no completed RSVPs.</h2>";
-			}
+			}// else
 
-		mysqli_close($conn);
+			mysqli_close($conn);
 
 		?>
 		
